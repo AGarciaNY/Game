@@ -1,0 +1,13 @@
+.box {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+#blue {
+    height:150px;
+    width:300px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScqGXN9u_ymkHnqEptsXPte1luADbMzMvdq2Gg8hCV5rT9Ppffmw");
+    background-repeat: no-repeat;
+    top:500px;
+}
