@@ -26,7 +26,15 @@ body {
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
+.characterdiv{
+    position: absolute;
+    top:30%;
+    left:35%;
+}
 .character{
-    height:50px;
-    
+    height:100px;
+    cursor:pointer
+}
+#cha1{
+    backface-visibility: hidden;
 }
