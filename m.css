@@ -32,9 +32,6 @@ body {
     left:35%;
 }
 .character{
+    cursor:pointer;
     height:100px;
-    cursor:pointer
-}
-#cha1{
-    backface-visibility: hidden;
 }
