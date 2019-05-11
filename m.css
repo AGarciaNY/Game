@@ -22,7 +22,7 @@
 
 body {
     height:90%;
-    width: 900px;
+    width:900px;
     -webkit-animation: bgcolor 20s infinite;
     animation: bgcolor 20s infinite;
     -webkit-animation-direction: alternate;
