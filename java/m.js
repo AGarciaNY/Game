@@ -83,9 +83,13 @@ chooscharacter();
 function LoadingPage(){
     var startload=["one","two"];
     $("#startbutton").click(function(){
-        $("body").html("<body><h1 class='one'>sas</h1></body>");
+        $("body").html("<body><button id='test'>sas</button></body>");
         startload.push("three");
     });
+    $("#test").click(function(){
+        console.log(startload);
+    });
+    console.log(startload);
     var times=0;
     var timem=0;
     var num=startload.length;
