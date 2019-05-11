@@ -78,41 +78,54 @@ function chooscharacter(){
         });
     });
 }
-chooscharacter();
 
+chooscharacter();
+var startload=["one","two"];
 function LoadingPage(){
-    var startload=["one","two"];
+    
     $("#startbutton").click(function(){
-        $("body").html("<body><button id='test'>sas</button></body>");
         startload.push("three");
-    });
-    $("#test").click(function(){
-        console.log(startload);
-    });
-    console.log(startload);
-    var times=0;
-    var timem=0;
-    var num=startload.length;
-    if(num >2){
-        setInterval(function(){
-            var d = new Date();
-            var n = d.getSeconds();
+        startload.push("three");
+        $("body").html("<body>"+"<button class='test'>"+"test"+"</button>"+"<h1 class='one'>"+"hi there"+"</h1>"+"</body>");
+            var times=0;
+            var timem=0;
             
-            if(times < n){
-                times=times+1;
-                n=n+2;
-                }
-            if(times===59){
-                times=0;
-                timem=timem+1;
-                }
-            if(times>n){
-                times=times+1; 
-                
+            if(startload.length >2 ){
+                $("html").css({"cursor":"wait"});
+                setInterval(function(){
+            if(startload.length > 2 && startload.length <5){
+                    var d = new Date();
+                    var n = d.getSeconds();
+                    if(times < n){
+                        times=times+1;
+                        n=n+2;
+                        }
+                    if(times===59){
+                        times=0;
+                        timem=timem+1;
+                        }
+                    if(times>n){
+                        times=times+1; 
+                        }
+                    console.log(startload.length);
+                    if(times ===10){
+                        startload.push("three");
+                        startload.push("three");
+                        $("html").css({"cursor":"context-menu"});
+                    }
+                    }
+                    $(".one").html("<h1 class='one'>"+timem+":"+times+"<h/1>");
+                }, 1000);
             }
-            console.log(startload.length);
-            $(".one").html("<h1 class='one'>"+timem+":"+times+"<h/1>");
-        }, 1000); 
-    }
+            
+                
+        });
+    $(".test").click(function(){
+        console.log(startload);
+        console.log("hi there");
+        });
+    console.log(startload);
+     
 }
+
 LoadingPage();
