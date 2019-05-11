@@ -35,3 +35,12 @@ body {
     cursor:pointer;
     height:100px;
 }
+#startbutton{
+    position: absolute;
+    left: 43%;
+    border:2px;
+    border-radius: 12px;
+    width: 130px;
+    height:50px;
+    font-size: 30px
+}

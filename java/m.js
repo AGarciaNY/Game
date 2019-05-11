@@ -17,6 +17,7 @@ function chooscharacter(){
         document.getElementById("cha1").style.visibility = "hidden";
         document.getElementById("cha2").style.visibility = "hidden";
         document.getElementById("cha3").style.visibility = "hidden";
+        $("#startbutton").html("<button id='startbutton'>START</button>");
         $(document).ready(function(){
         $("#cha0").animate({
             position: "absolute",
@@ -32,6 +33,7 @@ function chooscharacter(){
         document.getElementById("cha0").style.visibility = "hidden";
         document.getElementById("cha2").style.visibility = "hidden";
         document.getElementById("cha3").style.visibility = "hidden";
+        $("#startbutton").html("<button id='startbutton'>START</button>");
         $(document).ready(function(){
         $("#cha1").animate({
             position: "absolute",
@@ -48,6 +50,7 @@ function chooscharacter(){
         document.getElementById("cha1").style.visibility = "hidden";
         document.getElementById("cha0").style.visibility = "hidden";
         document.getElementById("cha3").style.visibility = "hidden";
+        $("#startbutton").html("<button id='startbutton'>START</button>");
         $(document).ready(function(){
         $("#cha2").animate({
             position: "absolute",
@@ -63,6 +66,7 @@ function chooscharacter(){
         document.getElementById("cha1").style.visibility = "hidden";
         document.getElementById("cha0").style.visibility = "hidden";
         document.getElementById("cha2").style.visibility = "hidden";
+        $("#startbutton").html("<button id='startbutton'>START</button>");
         $(document).ready(function(){
         $("#cha3").animate({
             position: "absolute",
@@ -75,6 +79,36 @@ function chooscharacter(){
     });
 }
 chooscharacter();
-$("body").click(function(){
-  console.log(charactercho);  
-});
+
+function LoadingPage(){
+    var startload=["one","two"];
+    $("#startbutton").click(function(){
+        $("body").html("<body><h1 class='one'>sas</h1></body>");
+        startload.push("three");
+    });
+    var times=0;
+    var timem=0;
+    var num=startload.length;
+    if(num >2){
+        setInterval(function(){
+            var d = new Date();
+            var n = d.getSeconds();
+            
+            if(times < n){
+                times=times+1;
+                n=n+2;
+                }
+            if(times===59){
+                times=0;
+                timem=timem+1;
+                }
+            if(times>n){
+                times=times+1; 
+                
+            }
+            console.log(startload.length);
+            $(".one").html("<h1 class='one'>"+timem+":"+times+"<h/1>");
+        }, 1000); 
+    }
+}
+LoadingPage();
