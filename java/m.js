@@ -86,9 +86,8 @@ function LoadingPage(){
     $("#startbutton").click(function(){
         startload.push("three");
         startload.push("three");
-        $("body").html("<body>"+"<button class='test'>"+"test"+"</button>"+"<h1 class='one'>"+"hi there"+"</h1>"+"</body>");
-            var times=0;
-            var timem=0;
+        $("body").html("<body>"+"<button class='test'>"+"test"+"</button>"+"<h1 class='one'></h1>"+"</body>");
+            var times=10;
             
             if(startload.length >2 ){
                 $("html").css({"cursor":"wait"});
@@ -96,25 +95,26 @@ function LoadingPage(){
             if(startload.length > 2 && startload.length <5){
                     var d = new Date();
                     var n = d.getSeconds();
-                    if(times < n){
-                        times=times+1;
-                        n=n+2;
-                        }
-                    if(times===59){
-                        times=0;
-                        timem=timem+1;
-                        }
-                    if(times>n){
-                        times=times+1; 
-                        }
-                    console.log(startload.length);
-                    if(times ===10){
+                    $(".one").html("<h1 class='one'>"+times+"<h/1>");
+                    
+                    if(times ===0){
+                        
+                        $(".one").html("<h1 class='one'>"+"GO!"+"<h1>");
                         startload.push("three");
                         startload.push("three");
                         $("html").css({"cursor":"context-menu"});
                     }
+                    if(times < n){
+                        times=times-1;
+                        n=n+2;
+                        }
+                    if(times>n){
+                        times=times-1; 
+                        }
+                    console.log(startload.length);
+                    
                     }
-                    $(".one").html("<h1 class='one'>"+timem+":"+times+"<h/1>");
+                    
                 }, 1000);
             }
             

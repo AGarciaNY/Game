@@ -2,10 +2,7 @@
 
 $("body").keydown(function(event) {
     //moves left
-    if (event.which === 37 && event.which === 38){
-        $("#blue").css("left", $("#blue").offset().left - 4);
-        $("#blue").css("top", $("#blue").offset().top -4);
-        }
+    
     if (event.which === 37) {
         $("#blue").css("left", $("#blue").offset().left - 4);
     //moves right
@@ -15,7 +12,6 @@ $("body").keydown(function(event) {
     else if (event.which === 38) {
         $("#blue").css("top", $("#blue").offset().top -4);
     //moves right
-    } else if (event.which === 40) {
-        $("#blue").css("top", $("#blue").offset().top +4);
     }
+    
 });

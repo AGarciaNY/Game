@@ -1,22 +1,22 @@
 @keyframes bgcolor {
     0% {
-        background-color: #45a3e5;
+        background-color: #3eefe3;
     }
 
     30% {
-        background-color: #66bf39;
+        background-color: #6b2cf4;
     }
 
     60% {
-        background-color: #eb670f;
+        background-color: #efec2b;
     }
 
     90% {
-        background-color: #f35;
+        background-color: #47d347;
     }
 
     100% {
-        background-color: #864cbf;
+        background-color: #c100f7;
     }
 }
 
@@ -45,4 +45,25 @@ body {
     width: 130px;
     height:50px;
     font-size: 30px
+}
+.one{
+    font-size: 200px;
+    position: absolute;
+    top:20px;
+    left:41%;
+}
+#map{
+    background-color: lightblue;
+    height:600px;
+    width:800px;
+    position: absolute;
+    left:15%;
+    z-index: -1;
+}
+.score{
+    height: 100px;
+    width: 100%;
+    background-color: red;
+    z-index: 3;
+    
 }
